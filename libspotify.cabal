@@ -1,0 +1,28 @@
+name:                libspotify
+version:             0.1.0.0
+synopsis:            Low level bindings to libspotify.
+license:             BSD3
+license-file:        LICENSE
+author:              Matthew Hayden
+maintainer:          mrehayden@gmail.com
+category:            FFI
+build-type:          Simple
+cabal-version:       >=1.8
+library
+  extensions:          GeneralizedNewtypeDeriving
+                       ForeignFunctionInterface
+  exposed-modules:     Bindings.Spotify.Data
+                       Bindings.Spotify.Data.AudioFormat
+                       Bindings.Spotify.Data.PlaylistCallbacks
+                       Bindings.Spotify.Data.SessionCallbacks
+                       Bindings.Spotify.Data.SessionConfig
+                       Bindings.Spotify.Data.Types
+                       Bindings.Spotify.Error
+                       Bindings.Spotify.Link
+                       Bindings.Spotify.Playlist
+                       Bindings.Spotify.Session
+                       Bindings.Spotify.Track
+                       Bindings.Spotify.Version
+  --other-modules:     
+  build-depends:       base ==4.5.*
+  extra-libraries:     spotify
